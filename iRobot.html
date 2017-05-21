@@ -4,12 +4,23 @@
 
 <html>
 	<head>
-		<title>iRobot - A Virtual personal robot</title>
+		<title>iRobot - A Virtual Personal Robot</title>
+		<script type="text/javascript">
+			function touchRobot() {
+				var userName = prompt("What is your name?", "Enter your name here.");
+
+				if (userName) {
+					alert("It is good to meet you, " + userName + "!");
+					document.getElementById("iRobotImg").src = "iRobotWinks.png";
+				}
+			}
+		</script>
 	</head>
 
-	<body onload="alert('Greetings, I am your personal virtual robot.');">
+	<body onload="alert('Greetings, I am your personal virtual robot. Click me!');">
 		<div style="margin-top:100px; text-align:center">
-			<img id="rockImg" src="iRobotFace.png" alt="iRobot" />
+			<img id="iRobotImg" src="iRobotFace.png" alt="iRobot" style="cursor:pointer"
+				onclick = "touchRobot();"/>
 		</div>
 	</body>
 </html>	
